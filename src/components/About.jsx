@@ -4,7 +4,7 @@ import reactImage from '../assets/about/react.png';
 import nodeImage from '../assets/about/node.png';
 import mongoImage from '../assets/about/mongodb.png';
 import javaImg from '../assets/about/Java-removebg-preview.png';
-import pythonImg from '../assets/about/python-removebg-preview.png';
+import pythonImg from '../assets/about/Python-removebg-preview.png';
 import springImg from '../assets/about/sqlpng.png';
 
 const About = () => {

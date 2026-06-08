@@ -102,7 +102,7 @@ data-aos-delay="100"
   I build scalable full-stack applications, robust REST APIs,
   and modern digital experiences using
   <span className="text-yellow-300 font-bold"> MERN Stack</span>,
-  <span className="text-orange-300 font-bold"> Spring Boot</span>,
+  <span className="text-orange-300 font-bold"> Java Spring Boot</span>,
   and
   <span className="text-red-300 font-bold"> Python</span>.
 </p>
@@ -123,7 +123,20 @@ data-aos-delay="100"
   </button>
 
   {/* Resume Button */}
-  <div className="relative group">
+  
+  
+  
+       <div className="relative group hidden md:block">
+
+
+
+
+
+
+
+
+
+
   <button className="px-4 py-2 md:px-6 md:py-2 rounded-full bg-[#ff2a2a] text-white font-semibold">
     Resume
   </button>
@@ -148,6 +161,44 @@ data-aos-delay="100"
   </div>
 </div>
 
+{/* Mobile Resume Button */}
+<a
+  href={lokiResume}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+  md:hidden
+  px-4 py-2
+  rounded-full
+  bg-[#ff2a2a]
+  text-white
+  font-semibold
+  shadow-lg
+  "
+>
+  Resume
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   {/* Contact */}
   <button
     onClick={(x) => {
@@ -165,29 +216,88 @@ data-aos-delay="100"
 
         {/* Right Side: Play Video Button */}
         <div 
-          data-aos="zoom-in"
-          data-aos-delay="600"
-          className="mt-8 md:mt-0 flex flex-row md:flex-col items-center gap-2 md:gap-3 cursor-pointer group self-start md:self-auto"
-          onClick={toggleVideo}
+          data-aos="fade-up" data-aos-delay="0" 
+ className="
+mt-6
+md:mt-0
+flex
+flex-row
+md:flex-col
+items-center
+gap-3
+cursor-pointer
+group
+self-start
+md:self-auto
+"
+ onClick={toggleVideo}
         >
-          <div className="w-12 h-12 md:w-20 md:h-20 rounded-full border border-white/30 bg-black/20 backdrop-blur-md flex justify-center items-center group-hover:scale-110 group-hover:bg-[#ff2a2a] transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_40px_rgba(255,42,42,0.6)]">
+          <div className="
+w-14
+h-14
+md:w-20
+md:h-20
+rounded-full
+border
+border-white/30
+bg-white/10
+backdrop-blur-xl
+flex
+justify-center
+items-center
+transition-all
+duration-500
+group-hover:scale-110
+group-hover:bg-[#ff2a2a]
+group-hover:border-[#ff6b6b]
+shadow-[0_0_25px_rgba(255,255,255,0.15)]
+group-hover:shadow-[0_0_40px_rgba(255,42,42,0.7)]
+">
             {!isPlaying || isMuted ? (
               // Play Icon
-              <svg className="w-5 h-5 md:w-8 md:h-8 text-white ml-0.5 md:ml-1" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 md:w-8 md:h-8 text-[#FFD700]
+drop-shadow-[0_0_12px_rgba(255,215,0,0.8)] ml-0.5 md:ml-1" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
               </svg>
             ) : (
               // Pause Icon
-              <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 md:w-8 md:h-8 text-[#FFD700]
+drop-shadow-[0_0_12px_rgba(255,215,0,0.8)]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
               </svg>
             )}
           </div>
-          <span className="text-white text-[10px] md:text-xs font-bold tracking-widest uppercase opacity-70 group-hover:opacity-100 transition-opacity">
-            {!isPlaying || isMuted ? "Play Reel" : "Pause"}
+          <span className="
+px-4
+py-2
+rounded-full
+border
+text-[#FFD700]
+bg-black/30
+border-[#FFD700]/30
+backdrop-blur-xl
+
+text-[10px]
+md:text-xs
+font-semibold
+tracking-[0.18em]
+uppercase
+transition-all
+duration-500
+group-hover:bg-[#ff2a2a]
+group-hover:border-[#ff6b6b]
+group-hover:shadow-[0_0_25px_rgba(255,42,42,0.5)]
+">
+           {!isPlaying || isMuted
+  ? "▶ Watch My Journey"
+  : "❚❚ Pause Video"}
           </span>
         </div>
       </div>
+
+
+
+
 
       {/* Scroll Indicator */}
       <div 

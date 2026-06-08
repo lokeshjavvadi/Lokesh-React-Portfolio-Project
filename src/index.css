@@ -11,6 +11,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* loki added to prevent horizontal scroll */
 }
 
 body {
@@ -18,6 +19,7 @@ body {
   padding: 0;
   background-color: #000;
   color: #fff;
+  overflow-x: hidden; /* loki added to prevent horizontal scroll */
 }
 
 [data-aos="drop-bounce"] {

@@ -49,7 +49,7 @@ const projects = [
       "Tailwind",
     ],
 
-    github: "#",
+    github: "https://github.com/lokeshjavvadi",
     demo: "#",
   },
 
@@ -74,7 +74,7 @@ const projects = [
       "CSS",
     ],
 
-    github: "#",
+    github: "https://github.com/lokeshjavvadi",
     demo: "#",
   },
 
@@ -98,7 +98,7 @@ const projects = [
       "Machine Learning",
     ],
 
-    github: "#",
+    github: "https://github.com/lokeshjavvadi",
     demo: "#",
   },
 
@@ -123,7 +123,7 @@ const projects = [
       "Postman",
     ],
 
-    github: "#",
+    github: "https://github.com/lokeshjavvadi",
     demo: "#",
   },
 
@@ -147,7 +147,7 @@ const projects = [
       "Node.js",
     ],
 
-    github: "#",
+    github: "https://github.com/lokeshjavvadi",
     demo: "#",
   },
 ];
@@ -156,7 +156,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative py-24 px-6 bg-black overflow-hidden"
+      className="relative py-24 px-6 bg-gradient-to-br from-[#12291d] via-[#25072e] to-[#12291d] overflow-hidden"
     >
       {/* Background Blur */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-red-500/20 blur-[140px]" />

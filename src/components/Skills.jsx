@@ -139,7 +139,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative py-24 px-6 bg-black text-white overflow-hidden"
+      className="relative py-24 px-6 bg-gradient-to-br from-[#121729] via-[#12291d] to-[#25072e] text-white overflow-hidden"
     >
       {/* Background Blur */}
       <div className="absolute top-20 left-20 w-72 h-72 bg-red-500/20 rounded-full blur-[120px]" />

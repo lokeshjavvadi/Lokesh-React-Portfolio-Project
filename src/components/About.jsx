@@ -6,6 +6,7 @@ import mongoImage from '../assets/about/mongodb.png';
 import javaImg from '../assets/about/Java-removebg-preview.png';
 import pythonImg from '../assets/about/Python-removebg-preview.png';
 import springImg from '../assets/about/sqlpng.png';
+import lokiHorse from '../assets/about/LokiHorsePic.jpeg';
 
 const About = () => {
   return (
@@ -91,7 +92,7 @@ const About = () => {
               {/* Image Container */}
               <div className="w-full aspect-[3/4] overflow-hidden rounded-xl bg-gray-800 border-2 border-transparent">
                 <img 
-                  src={stackImage} 
+                  src={lokiHorse} 
                   alt="Profile" 
                   className="w-full h-full object-cover"
                 />

@@ -57,7 +57,7 @@ const Experience = () => {
   return (
     <section
       id="my work"
-      className="bg-[#050505] text-white py-24 px-6 relative overflow-hidden"
+      className="bg-gradient-to-br from-[#121729] via-[#240221] to-[#25072e] text-white py-24 px-6 relative overflow-hidden"
     >
       {/* Background Blur */}
 

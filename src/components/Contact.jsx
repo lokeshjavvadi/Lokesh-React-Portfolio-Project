@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import {
   FaEnvelope,
@@ -9,7 +9,80 @@ import {
 } from "react-icons/fa";
 
 
+
+
+
+
+
+
+
 const Contact = () => {
+const [formData, setFormData] = useState({
+  firstName: "",
+  lastName: "",
+  email: "",
+  message: ""
+});
+
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value
+  });
+};
+
+const sendToWhatsApp = (e) => {
+  e.preventDefault();
+
+  const text = `
+👋 New Portfolio Inquiry
+
+Name: ${formData.firstName} ${formData.lastName}
+
+Email: ${formData.email}
+
+Message:
+${formData.message}
+`;
+
+  window.open(
+    `https://wa.me/919701587978?text=${encodeURIComponent(text)}`,
+    "_blank"
+  );
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -58,7 +131,7 @@ const Contact = () => {
     flex
     flex-col
     justify-between
-    rounded-tl-[60px]
+    
     shadow-[0_0_60px_rgba(255,42,42,0.35)]
     border
     border-white/10
@@ -69,7 +142,10 @@ const Contact = () => {
             Reach Us
           </div>
 
-         <form className="grid lg:grid-cols-2 gap-16 w-full">
+        <form
+  onSubmit={sendToWhatsApp}
+  className="grid lg:grid-cols-2 gap-16 w-full"
+>
 
   {/* LEFT SIDE - CONTACT FORM */}
   <motion.div
@@ -90,7 +166,10 @@ const Contact = () => {
     <div>
       <input
         type="text"
-        placeholder="First Name"
+  name="firstName"
+  value={formData.firstName}
+  onChange={handleChange}
+  placeholder="First Name"
         className="
 w-full
 bg-white/5
@@ -113,8 +192,11 @@ placeholder-white/60
 
     <div>
       <input
-        type="text"
-        placeholder="Last Name"
+         type="text"
+  name="lastName"
+  value={formData.lastName}
+  onChange={handleChange}
+  placeholder="Last Name"
         className="
 w-full
 bg-white/5
@@ -138,7 +220,10 @@ placeholder-white/60
     <div>
       <input
         type="email"
-        placeholder="Email Address"
+  name="email"
+  value={formData.email}
+  onChange={handleChange}
+  placeholder="Email Address"
         className="
 w-full
 bg-white/5
@@ -161,8 +246,11 @@ placeholder-white/60
 
     <div>
       <textarea
-        placeholder="Tell me about your project..."
-        rows="3"
+        name="message"
+  value={formData.message}
+  onChange={handleChange}
+  placeholder="Tell me about your project..."
+  rows="3"
         className="
 w-full
 bg-white/5

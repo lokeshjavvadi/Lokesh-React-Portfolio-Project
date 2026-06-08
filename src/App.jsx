@@ -12,7 +12,7 @@ import Experience from './components/Experince'
 
 function App() {
   return (
-    <>
+    <div className="overflow-hidden">
       <Preloader />
       <Navbar />
       <Hero />
@@ -20,10 +20,9 @@ function App() {
       <Skills />
       <Projects />
       <Experience />
-     
       <Contact />
       
-    </>
+    </div>
   )
 }
 
